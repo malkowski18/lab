@@ -1,0 +1,52 @@
+#include<iostream>
+
+using namespace std;
+
+unsigned const int n=10;
+
+unsigned int tab1[n];
+unsigned int tab2[n];
+
+unsigned int *wsk1=&tab1[n];
+unsigned int *wsk2=&tab2[n];
+
+int funk(unsigned int n, unsigned int *wsk1, unsigned int *wsk2);
+
+int main()
+{
+	cout<<"Wypelnij tablice 1"<<endl;
+for(int i=0; i<n; i++)
+{
+	cin>>tab1[i];
+}
+cout<<"Wypelnij tablice 2"<<endl;
+for(int i=0; i<n; i++)
+{
+	cin>>tab2[i];
+}
+	funk(n, wsk1, wsk2);
+	return 0;
+}
+int funk(unsigned int n, unsigned int *wsk1, unsigned int *wsk2)
+{
+	int tab3[n];
+	for (int j=0; j<n; j++)
+	{
+		tab3[j]=tab1[j];
+		tab1[j]=tab2[j];
+		tab2[j]=tab3[j];
+	}	
+	cout<<"TABLICA 1"<<endl;
+		for(int i=0; i<n; i++)
+		{
+			cout<<tab1[i]<<'\t';
+		}
+		cout<<endl;
+	cout<<"TABLICA 2"<<endl;
+		for(int i=0; i<n; i++)
+		{
+			cout<<tab2[i]<<'\t';
+		}
+
+	
+}

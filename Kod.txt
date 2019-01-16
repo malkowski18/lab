@@ -1,0 +1,21 @@
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+	int sum=0;
+	int a;
+	
+	cout<<"Prosze podac liczbe"<<endl;
+	
+	while(sum<100)
+	{
+		cin>>a;
+		sum+=a;
+	}
+	
+	cout<<"Wyliczona suma rowna sie"<<sum<<endl;
+	
+	return 0;
+}
